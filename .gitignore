@@ -5,3 +5,6 @@
 _site
 Gemfile.lock
 *.code-workspace
+
+# local PDF build output
+Jan_Bednar_CV.pdf

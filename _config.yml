@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: Ing. Jan Bednář
-title: Senior developer
+title: Senior developer / IT architekt
 email: ahoj@janbednar.cz
 website: www.janbednar.cz
 
@@ -48,19 +48,33 @@ gtag: "G-FYJYW9SP17"
 about_title: O mně
 about_profile_image: images/profile.jpeg
 about_content: |
-  Ahoj! Jmenuji se Honza (přezdívka Bedla) a jsem SW developer.
+  Ahoj! Jmenuji se Honza (přezdívka Bedla) a jsem SW developer a IT architekt.
 
-  Mezi moje specializace patří <mark>JavaEE</mark>, <mark>Apache Camel</mark>, <mark>Spring Boot</mark>, <mark>Quarkus</mark> a integrace včetně designu řešení.
+  Mezi moje specializace patří <mark>Java EE</mark>, <mark>Apache Camel</mark>, <mark>Spring Boot</mark>, <mark>Quarkus</mark> a integrace včetně designu řešení.
 
-  Umím být součástí celého vývojového cyklu, od quickscanu, nabídky, analýzy, detail designu, přes vývoj, testing, profiling a ladění, CI/CD až po release a i následný L3 support.
+  Umím být součástí celého vývojového cyklu, od quickscanu, nabídky, analýzy, detail designu, přes vývoj, testing, profiling a ladění, CI/CD až po release i následný L3 support.
 
   Dokáži pracovat v týmu i sám, agilem i waterfallem.
 
   Hledám pouze kreativní projekty, které mi budou dávat smysl. Nehledám teplé místečko na údržbě legacy aplikací.
   Hledám projekty na IČO. Nehledám práci na HPP.
 
-  Jsem Apache member a ❤ Open Source.
+  Jsem Apache committer a ❤ Open Source.
 content:
+  - title: Projekty v rámci Tekies # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: top-middle
+        title: UPM2 pro PVZP
+        description: |
+          Pro PVZP jsem v roli IT architekta a DevOps inženýra předělal celý aplikační stack UPM2 z <mark>Docker Swarm</mark> do <mark>Kubernetes</mark> (<mark>Rancher RKE2</mark>) a následně jsem několik let zodpovídal za provoz a rozvoj celé Kubernetes platformy. Spravoval jsem celkem 7 clusterů, podporoval vývoj při vzniku nových microservices a rozšiřoval monitoring.
+          Stack tvoří Java microservices (<mark>Java 8</mark> - <mark>Java 21</mark>) v Docker kontejnerech, <mark>Percona MongoDB</mark>, <mark>Hazelcast</mark>, <mark>LDAP</mark> a <mark>Nginx ingress</mark>. Observabilitu zajišťuje <mark>OpenSearch</mark>, <mark>FluentBit</mark>, <mark>Prometheus</mark>, <mark>Grafana</mark> a <mark>Percona PMM</mark>. CI/CD jsem zmigroval z <mark>Jenkins</mark> do <mark>GitLab CI</mark>, artefakty spravuje <mark>Nexus</mark>.
+          Jako architekt jsem zodpovídal za core změny v aplikaci a frameworcích UPM2 a směřování vývoje. Jako vývojář jsem do sdíleného frameworku doplnil <mark>MongoDB</mark> transakce a nový datový model pro velké kolekce s historií.
+          Vyvinul jsem knihovnu pro překlad RQL dotazů do <mark>MongoDB</mark>, <mark>OpenSearch</mark> a <mark>SQL</mark> a na ní postavil novou vyhledávací microservice (<mark>Spring Boot 3</mark>, <mark>Java 21</mark>, <mark>OpenSearch</mark>) včetně ETL indexace. Dále jsem vyvinul integrace na externí systémy s <mark>Resilience4j</mark>, přihlášení přes <mark>OAuth/OpenID Connect</mark> a službu pro řízenou invalidaci cache napříč microservices přes <mark>Kubernetes API</mark>. Kromě toho jsem průběžně řešil řadu dalších úkolů, například ladění výkonu dotazů, bezpečnostní opravy, JSON logování s correlation ID napříč službami nebo migrace dat.
+      - layout: top-middle
+        title: DWH pro PVZP
+        description: |
+          Pro PVZP jsem v Kubernetes provozoval datovou platformu postavenou na <mark>Strimzi Apache Kafka</mark>, <mark>Kafka Connect</mark>, <mark>PostgreSQL</mark> a Java microservices. Prezentační vrstvu zajišťuje <mark>Apache Superset</mark>, monitoring <mark>OpenSearch</mark>, <mark>Prometheus</mark> a <mark>Grafana</mark>.
   - title: Projekty v rámci CGI # Title for the section <mark></mark>
     layout: list # Type of content section (list/text)
     content:
@@ -68,30 +82,30 @@ content:
         title: Stream cloud processing IPTV
         description: |
           Byl jsem součástí agilního týmu, který vyvíjel IPTV stream processing platformu postavenou na mikroservisní architektuře v <mark>Microsoft Azure</mark>. Na projektu jsem byl v rolích Team Leadera, programátora a architekta.
-          Aplikace využívá <mark>Apache Kafka</mark>, <mark>Azure Data Explorer</mark>, <mark>Azure Kubernetes</mark>, <mark>Quarkus</mark>, <mark>PostgreSQL</mark>, <mark>Eclipse Vert.X</mark>, <mark>SmallRye Reactive Messaging</mark>, <mark>Grafana</mark>, <mark>Azure AD</mark>.
-          Provozní monitoring zajišťuje <mark>Eclipse Microprofile Metrics</mark>, který vystavuje <mark>Prometheus</mark> metriky pro <mark>Azure Monitor</mark>. CI/CD proces je zajištěný přes <mark>Azure DevOPS</mark>.
+          Aplikace využívá <mark>Apache Kafka</mark>, <mark>Azure Data Explorer</mark>, <mark>Azure Kubernetes</mark>, <mark>Quarkus</mark>, <mark>PostgreSQL</mark>, <mark>Eclipse Vert.x</mark>, <mark>SmallRye Reactive Messaging</mark>, <mark>Grafana</mark>, <mark>Azure AD</mark>.
+          Provozní monitoring zajišťuje <mark>Eclipse Microprofile Metrics</mark>, který vystavuje <mark>Prometheus</mark> metriky pro <mark>Azure Monitor</mark>. CI/CD proces je zajištěný přes <mark>Azure DevOps</mark>.
       - layout: top-middle
         title: Stream processing pro BI a Service Assurance
         description: |
           Byl jsem součástí agilního týmu, který vyvíjel IPTV stream processing platformu postavenou na mikroservisní architektuře v on-prem prostředí. Na projektu jsem byl v rolích Team Leadera a programátora.
-          Ekosystém využívá <mark>Apache Kafka</mark>, <mark>Python3</mark>, <mark>Numpy</mark>, <mark>Pandas</mark>, <mark>Kafka Connect</mark> a <mark>Debezium CDC</mark> pro akvizici, normalizaci, transformaci a agregaci dat. Výstupem jsou data v <mark>ElasticSearch</mark>, <mark>MySQL</mark> a <mark>InfluxDB</mark>.
-          Aplikace je nasazená v on-prem pomocí <mark>Docker Compose</mark>. Build je přes <mark>Gitlab CI Pipelines</mark>.
+          Ekosystém využívá <mark>Apache Kafka</mark>, <mark>Python 3</mark>, <mark>NumPy</mark>, <mark>Pandas</mark>, <mark>Kafka Connect</mark> a <mark>Debezium CDC</mark> pro akvizici, normalizaci, transformaci a agregaci dat. Výstupem jsou data v <mark>Elasticsearch</mark>, <mark>MySQL</mark> a <mark>InfluxDB</mark>.
+          Aplikace je nasazená v on-prem pomocí <mark>Docker Compose</mark>. Build je přes <mark>GitLab CI</mark>.
           Prezentační logiku pro Service Assurance zajišťují dashboardy v <mark>Grafana</mark>.
           Prezentační logiku pro BI zajišťuje existující Data Warehouse, kterému aplikace poskytuje na SFTP pravidelné extrakty.
       - layout: top-middle
         title: PDS
         description: |
           Vyvinul jsem aplikaci pro správu a distribuci firmware a balíčků CPE zařízení. Na projektu jsem provedl analýzu řešení, včetně zmapování existujícího komunikačního protokolu a následného vývoje. Aplikace je nasazena v on-prem na <mark>Payara AS</mark> a skládá se z backendu a frontendu.
-          Backend vystavuje HTTP endpointy pro CPE a zároveň REST rozhranní pro frontend za využití <mark>Spring Boot</mark>, <mark>Apache Camel</mark>, <mark>EclipseLink</mark>, <mark>Hazelcast</mark>, <mark>MySQL NDB Cluster</mark>. Frontend vystavující uživatelské a administrátorské rozhranní jsem naprogramoval v <mark>AngularJS</mark>.
-          Aplikaci jsem následně podle požadavků rozšířil i pro nové typy CPE s odlišným komunikačním rozhranním.
+          Backend vystavuje HTTP endpointy pro CPE a zároveň REST rozhraní pro frontend za využití <mark>Spring Boot</mark>, <mark>Apache Camel</mark>, <mark>EclipseLink</mark>, <mark>Hazelcast</mark>, <mark>MySQL NDB Cluster</mark>. Frontend vystavující uživatelské a administrátorské rozhraní jsem naprogramoval v <mark>AngularJS</mark>.
+          Aplikaci jsem následně podle požadavků rozšířil i pro nové typy CPE s odlišným komunikačním rozhraním.
       - layout: top-middle
         title: MAS
         description: |
-          Vyvinul jsem aplikaci pro řízení video enkodéru. Aplikace slouží k přípravě a transkódování video obsahu před nasazením do VOD katalogu. Aplikace má <mark>AngularJS</mark> frontend, obsahující <mark>Shaka Player</mark> a komunikuje se <mark>Spring Boot</mark> backendem pro správu metadat o video souboru. Metadata o jednotlivých stopách a náhledy generuje <mark>Apache Camel</mark> za využití <mark>FFMpeg</mark>.
+          Vyvinul jsem aplikaci pro řízení video enkodéru. Aplikace slouží k přípravě a transkódování video obsahu před nasazením do VOD katalogu. Aplikace má <mark>AngularJS</mark> frontend, obsahující <mark>Shaka Player</mark> a komunikuje se <mark>Spring Boot</mark> backendem pro správu metadat o video souboru. Metadata o jednotlivých stopách a náhledy generuje <mark>Apache Camel</mark> za využití <mark>FFmpeg</mark>.
       - layout: top-middle
         title: PerfTool
         description: |
-          Vyvinul jsem pro IPTV platformu aplikaci pro reálné generování zátěže. Toto usnadnilo projekt stabilizace platformy, protože to umožnilo nasimulovat chování platformy z předchozích výpadků na izolovaném prostředí, nebo mimo televizní špičku. Aplikace pomocí grok patternů parsuje access logy a zákaznické extrakty do <mark>MongoDB</mark>. Následně spouští nad daty transformační vrstvy, které upravují jednotlivé parametry HTTP volání tak, aby byl dodržený požadovaný histogram a délka zátěže, validita volání s ohledem na zadané testovací účty. Technické řešení je pomocí <mark>Apache Camel</mark>, <mark>Spring Boot</mark> a <mark>OKHttp</mark>.
+          Vyvinul jsem pro IPTV platformu aplikaci pro reálné generování zátěže. Toto usnadnilo projekt stabilizace platformy, protože to umožnilo nasimulovat chování platformy z předchozích výpadků na izolovaném prostředí nebo mimo televizní špičku. Aplikace pomocí grok patternů parsuje access logy a zákaznické extrakty do <mark>MongoDB</mark>. Následně spouští nad daty transformační vrstvy, které upravují jednotlivé parametry HTTP volání tak, aby byl dodržený požadovaný histogram a délka zátěže a validita volání s ohledem na zadané testovací účty. Technické řešení je pomocí <mark>Apache Camel</mark>, <mark>Spring Boot</mark> a <mark>OkHttp</mark>.
       - layout: top-middle
         title: Validátor VOD obsahu
         description: |
@@ -99,19 +113,19 @@ content:
       - layout: top-middle
         title: ActiveMQ Artemis
         description: |
-          Pro Telco operátora jsem ladil JMS Stomp broker ActiveMQ Artemis, který slouží pro vzdálené ovládání CPE. JMS Cluster jsem optimalizoval jak na úrovni konfigurace a JVM, tak na úrovni OS a TCP IP stacku. Pro stejného operátora jsem vyvinul OAuth plugin do ActiveMQ Artemis
+          Pro telco operátora jsem ladil JMS/STOMP broker ActiveMQ Artemis, který slouží pro vzdálené ovládání CPE. JMS Cluster jsem optimalizoval jak na úrovni konfigurace a JVM, tak na úrovni OS a TCP/IP stacku. Pro stejného operátora jsem vyvinul OAuth plugin do ActiveMQ Artemis.
       - layout: top-middle
         title: CRM
         description: |
-          Byl jsem součástí týmu, který pro telco operátora vyvíjel backendovou část pro Liferay CRM. Technologie <mark>Spring</mark>, <mark>Wildfly</mark>, <mark>Oracle</mark>
+          Byl jsem součástí týmu, který pro telco operátora vyvíjel backendovou část pro Liferay CRM. Technologie <mark>Spring</mark>, <mark>WildFly</mark>, <mark>Oracle</mark>.
       - layout: top-middle
         title: Billing
         description: |
-          Byl jsem několik let součástí týmu, který pracoval na velkém transformačním projektu billingu. Navrhli jsme a vyvinuli distribuovanou integrační vrstvu mezi provisioningem a billingem, umožňující vykonávání dekompozičních pravidel nad produkty podle logických celků a pluginů na základě BPMN diagramů v Enterprise Architect. Technologie <mark>Wildfly</mark>, <mark>Apache Camel</mark>, <mark>Hibernate</mark>, <mark>Infinispan</mark>, <mark>Oracle</mark>, <mark>JavaFX</mark>, <mark>SOAP</mark>, <mark>JMS</mark>. Aplikace je nasazená ve Wildfly clusteru v doménovém módu. K této aplikaci jsme vyvinuli i několik obslužných aplikací pro správu konfigurací a trasování požadavků.
+          Byl jsem několik let součástí týmu, který pracoval na velkém transformačním projektu billingu. Navrhli jsme a vyvinuli distribuovanou integrační vrstvu mezi provisioningem a billingem, umožňující vykonávání dekompozičních pravidel nad produkty podle logických celků a pluginů na základě BPMN diagramů v Enterprise Architect. Technologie <mark>WildFly</mark>, <mark>Apache Camel</mark>, <mark>Hibernate</mark>, <mark>Infinispan</mark>, <mark>Oracle</mark>, <mark>JavaFX</mark>, <mark>SOAP</mark>, <mark>JMS</mark>. Aplikace je nasazená ve WildFly clusteru v doménovém módu. K této aplikaci jsme vyvinuli i několik obslužných aplikací pro správu konfigurací a trasování požadavků.
       - layout: top-middle
         title: Operativní reporting
         description: |
-          Vyvinuli jsme aplikaci pro uživatelsky přívětivé generování ad-hoc reportů, pomocí drag&drop skládání jednotlivých entit a vazeb. Aplikace je vyvinuta pomocí <mark>PHP</mark> a <mark>JQuery</mark>. Aplikační logika validuje a skládá uživatelské modely reportů a následně je dransformuje v SQL dotazy do existujícího datového skladu.
+          Vyvinuli jsme aplikaci pro uživatelsky přívětivé generování ad-hoc reportů, pomocí drag&drop skládání jednotlivých entit a vazeb. Aplikace je vyvinuta pomocí <mark>PHP</mark> a <mark>jQuery</mark>. Aplikační logika validuje a skládá uživatelské modely reportů a následně je transformuje v SQL dotazy do existujícího datového skladu.
   - title: Vlastní projekty
     layout: list # Type of content section (list/text)
     content:
@@ -119,7 +133,7 @@ content:
         title: ETKasa
         link: "http://etkasa.cz"
         description: |
-          Vyvinul jsem <mark>Android</mark> aplikaci pro evidenci EET tržeb. Aplikace používá <mark>SQLite</mark> a <mark>GreenDAO</mark> pro ukládání tržeb, <mark>SOAP</mark> pro komunikaci s API finanční správy, <mark>ACRA</mark> pro error reporting. Komunikace s tiskárnou probíhá přímou komunikací <mark>POS</mark> příkazů přes bluetooth socket.  K aplikaci jsem vyvinul i <mark>Spring Boot</mark> REST API backend pro správu licencí, aktualizací a monitoring.
+          Vyvinul jsem <mark>Android</mark> aplikaci pro evidenci EET tržeb. Aplikace používá <mark>SQLite</mark> a <mark>greenDAO</mark> pro ukládání tržeb, <mark>SOAP</mark> pro komunikaci s API finanční správy, <mark>ACRA</mark> pro error reporting. Tisk probíhá přímým odesíláním <mark>POS</mark> příkazů přes Bluetooth socket. K aplikaci jsem vyvinul i <mark>Spring Boot</mark> REST API backend pro správu licencí, aktualizací a monitoring.
       - layout: top-middle
         title: Apache Camel
         link: https://github.com/apache/camel
@@ -129,19 +143,19 @@ content:
             icon: fas fa-globe
             url: camel.apache.org/community/team/
         description: |
-          Od roku 2019 jsem členem Apache týmu a podílím se na rozvoji Open Source frameworku Apache Camel, který implementuje EIP (Enterprise Integration Patterns)
+          Od roku 2019 jsem Apache Camel committer a podílím se na rozvoji tohoto Open Source frameworku, který implementuje EIP (Enterprise Integration Patterns).
       - layout: top-middle
         title: OpenFonts
         link: https://github.com/bedlaj/openfonts
         # link_text: Project Website
         description: |
-          Vyvinul jsem a udržuji repositář Google Fonts pro <mark>NPM</mark>, který pravidelně stahuje Google Fonty s otevřenou licencí jako NPM moduly. Využívá <mark>NodeJS</mark> a <mark>Lerna</mark>.
+          Vyvinul jsem a udržuji repozitář Google Fonts pro <mark>NPM</mark>, který pravidelně stahuje Google Fonty s otevřenou licencí jako NPM moduly. Využívá <mark>Node.js</mark> a <mark>Lerna</mark>.
       - layout: top-middle
         title: SHA-512 TS
         link: https://github.com/bedlaj/sha512-crypt-ts
         # link_text: Project Website
         description: |
-          Vyvinul jsem typescript NPM modul pro SHA-512, protože jsem potřeboval knihovnu typescript pro Unifi Reset Password kompatibilní s mkpasswd implementací.
+          Vyvinul jsem TypeScript NPM modul pro SHA-512, protože jsem pro UniFi reset password potřeboval knihovnu kompatibilní s implementací mkpasswd.
       - layout: top-middle
         title: UniFi reset password
         link: https://github.com/bedlaj/unifi-reset-password
@@ -152,21 +166,29 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: left
+        title: Tekies
+        link: https://www.tekies.eu
+        # link_text: boringcompany.com
+        sub_title: IT architekt / DevOps inženýr
+        caption: Leden 2022 - dosud
+        description: |
+          V Tekies jsem pracoval převážně pro PVZP v roli IT architekta a DevOps inženýra. Zodpovídal jsem za Kubernetes platformu a provoz celého aplikačního stacku, za core změny aplikace UPM2 a jejích frameworků a za směřování vývoje. Vedle toho jsem vyvíjel sdílené knihovny, nové microservices a integrace na externí systémy.
+      - layout: left
         title: CGI IT Czech Republic
         link: https://www.cgi.com/ceska-republika/cs
         # link_text: boringcompany.com
         sub_title: Analyst/programmer → System Designer → System Architect
         caption: Březen 2015 - Prosinec 2021
         description: |
-          V CGI jsem pracoval převážně na projektech v telco sektoru, ale také ve finančním sektoru. Podílel jsem se na návrhu řešení, nabídkách, implementaci, technologickém rozvoji a L3 supportu. V CGI jsem byl v průběhu času podle potřeby v roli analytika, programátora, architekta a team leadera. V posledních letech jsem participoval i přípravám nabídek, cenových odhadů a v menší míře i business developmentu. Podílel jsem se na inovacích a adopci nových technologí.
+          V CGI jsem pracoval převážně na projektech v telco sektoru, ale také ve finančním sektoru. Podílel jsem se na návrhu řešení, nabídkách, implementaci, technologickém rozvoji a L3 supportu. V CGI jsem byl v průběhu času podle potřeby v roli analytika, programátora, architekta a team leadera. V posledních letech jsem se zapojoval i do přípravy nabídek, cenových odhadů a v menší míře i do business developmentu. Podílel jsem se na inovacích a adopci nových technologií.
       - layout: left
-        title: Materna Communications
+        title: Materna Communications (dnes Comverga)
         link: https://www.comverga.com/cze/
         # link_text: boringcompany.com
         sub_title: Programátor
         caption: Červenec 2014 - Leden 2015
         description: |
-          Pracoval jsem na vývoji Android aplikace pro ČMI s JavaEE Backendem. Spolupracoval jsem na vývoji samoobsluhy pro virtuálního operátora. Zautomatizoval jsem uživatelské testy samoobsluhy, včetně automatizace SMS OTP kódů, pomoci GSM brány. Vyvíjel jsem SPA aplikace pro SMS soutěže, včetně integrace na SMS bránu. Vyvíjel jsem Perl monitorovací scripty pro Nagios a Icinga.
+          Pracoval jsem na vývoji Android aplikace pro ČMI s Java EE backendem. Spolupracoval jsem na vývoji samoobsluhy pro virtuálního operátora. Zautomatizoval jsem uživatelské testy samoobsluhy, včetně automatizace SMS OTP kódů, pomocí GSM brány. Vyvíjel jsem SPA aplikace pro SMS soutěže, včetně integrace na SMS bránu. Vyvíjel jsem Perl monitorovací scripty pro Nagios a Icinga.
 
   - title: Vzdělání # Title for the section
     layout: list # Type of content section (list/text)
@@ -174,11 +196,11 @@ content:
       - layout: top-middle
         title: Univerzita Hradec Králové
         caption: 2013 - 2016
-        sub_title: Aplikovaná Informatika - Ing.
+        sub_title: Aplikovaná informatika - Ing.
       - layout: top-middle
         title: Univerzita Hradec Králové
         caption: 2010 - 2013
-        sub_title: Aplikovaná Informatika - Bc.
+        sub_title: Aplikovaná informatika - Bc.
 
   - title: Něco navíc
     layout: list
@@ -190,7 +212,7 @@ content:
       - layout: left
         caption: TCP přenosy a stabilita sítě
         description: |
-          Vím, co je TCP retransmission, SYN Flood, socket TIME_WAIT,... Nebojím se použít Wireshark a Tcpdump.
+          Vím, co je TCP retransmission, SYN Flood, socket TIME_WAIT,... Nebojím se použít Wireshark a tcpdump.
       - layout: left
         caption: Open Source
         description: |
