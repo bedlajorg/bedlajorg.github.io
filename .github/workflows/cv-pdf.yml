@@ -10,7 +10,7 @@ jobs:
   pdf:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: ruby/setup-ruby@v1
         with:
@@ -25,8 +25,10 @@ jobs:
       - name: Print site to PDF
         run: scripts/build-pdf.sh _site Jan_Bednar_CV.pdf
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
-          name: Jan_Bednar_CV
+          # Single file uploaded as-is, so the artifact is the PDF itself (not a zip);
+          # the artifact name is then taken from the file name.
           path: Jan_Bednar_CV.pdf
+          archive: false
           if-no-files-found: error
