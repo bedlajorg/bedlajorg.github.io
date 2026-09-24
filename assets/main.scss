@@ -36,6 +36,13 @@
     margin-bottom: 1rem;
   }
 
+  // Short sections stay on one page (ids come from the section titles in _config.yml)
+  .list-container:has(h3#vzdělání),
+  .list-container:has(h3#něco-navíc) {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
   // Footer only repeats name + email from the header
   .footer-container {
     display: none;
